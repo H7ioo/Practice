@@ -236,21 +236,55 @@ header .info .profile a i:last-child {
 }
 .transition .history .users {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
+    margin-bottom: 50px;
 }
 .transition .history .user {
     display: flex;
+}
+.transition .history .user i {
+    padding: 16px 17px;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: flex-start;
+    border: 1px solid var(--main-border-color);
+    background-color: var(--main-color-alt);
+    color: white;
 }
 .transition .history .user .name {
     display: flex;
     flex-direction: column;
 }
+.transition .history .user.last .name p {
+    text-align: end;
+}
+.transition .history .user.last i {
+    margin-left: 10px;
+    margin-right: 0;
+}
 .transition .history .user .name p:first-child {
     font-size: larger;
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
-.transition .history .user i {
-    padding: 5px;
-    margin-right: 10px;
+.transition .history .user .name p:nth-child(2) {
+    margin-bottom: 10px;
+}
+.transition .history .value {
+    display: flex;
+    background-color: var(--item-color);
+    padding: 20px;
+    margin: 10px;
+    color: var(--item-text-color-opacity);
+}
+.transition .history .value p {
+    width: 35%;
+}
+.transition .history .value span.important {
+    color: coral;
+}
+.transition .history .value:nth-child(1) {
+    color: var(--main-color-alt);
+    font-weight: 500;
 }
 /* End Transition */
