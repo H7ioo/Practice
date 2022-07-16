@@ -1,0 +1,58 @@
+:root {
+    --main-color: #E91E63;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+div {
+    width: 800px;
+    height: 250px;
+    margin: 100px auto;
+    border-color: var(--main-color);
+    border-style: solid;
+    border-width: 5px 70px 5px 120px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+div::before, div::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 120.5px;
+    border-color: transparent white transparent transparent;
+}
+div::before {
+    left: -240px;
+}
+div::after {
+    z-index: -1;
+    right: 0;
+    border-color: transparent var(--main-color) transparent transparent;
+}
+div p {
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    position: relative;
+    font-weight: 600;
+}
+div p::before {
+    content: "Elzero Web School";
+    position: absolute;
+    width: max-content;
+    margin-left: calc(100% + 10px);
+    color: black;
+    font-weight: normal;
+}
+div p::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    left: 485px;
+}
